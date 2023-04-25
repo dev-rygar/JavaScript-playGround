@@ -1,0 +1,81 @@
+// To put in practice what I've learned in conditionals, we will make a basic Magic Eight Ball program.
+
+// First I'll initialize a variable that will hold the user's name.
+// Note: since I have some advance knowledge in javascript, I will change this program infuture where I can ask the user to input their name and save it to variable userName.
+
+let userName = 'John' // My name
+
+// This line of code will log a greet message that has a default message incase the userName is empty.
+userName ? console.log(`Hello, ${userName}!`) : console.log('Hello!');
+
+// I will initialize a variable that will hold our user's question.
+let userQuestion = 'Am I in the right path?';
+console.log(`User asked: ${userQuestion}`);
+
+// Now we will initialize a variable that will generate a random number from 0 to 7 (7 is included).
+// We will also use the Math built-in method floor and random to generate a random number and round down the random number.
+let randomNumber = Math.floor(Math.random() * 8)
+
+// I will initialize a variable that will contain the answer of eightball later, base on the random number.
+let eightBall = '';
+
+// Now I am going to make the control flow/conditional
+switch(randomNumber) {
+  case 0:
+    eightBall = 'It is certain'
+    break;
+  case 1:
+    eightBall = 'It is decidedly so'
+    break;
+  case 2:
+    eightBall = 'Reply hazy try again'
+    break;
+  case 3:
+    eightBall = 'Cannot predict now'
+    break;
+  case 4:
+    eightBall = 'Do not count on it'
+    break;
+  case 5:
+    eightBall = 'My sources say no'
+    break;
+  case 6:
+    eightBall = 'Outlook not so good'
+    break;  
+  case 7:
+    eightBall = 'Signs point to yes'
+    break;
+  default:
+    eightBall = 'Default returned, check switch-case statement!' 
+}
+
+/*
+if (randomNumber === 0){
+  eightBall = 'It is certain'
+
+} else if (randomNumber === 1) {
+  eightBall = 'It is decidedly so'
+
+} else if (randomNumber === 2) {
+  eightBall = 'Reply hazy try again'
+
+} else if (randomNumber === 3) {
+  eightBall = 'Cannot predict now'
+
+} else if (randomNumber ===4) {
+  eightBall = 'Do not count on it'
+
+} else if (randomNumber === 5) {
+  eightBall = 'My sources say no'
+} else if (randomNumber === 6) {
+  eightBall = 'Outlook not so good'
+
+} else if (randomNumber === ) {
+  eightBall = 'Signs point to yes'
+
+} else {
+  console.log('Check if-else-if statement, error!')
+}
+*/
+
+console.log(`Magic Eight ball says: ${eightBall}`)

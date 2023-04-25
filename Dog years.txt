@@ -1,0 +1,30 @@
+// Dog Years Calculator
+// Dogs do mature faster than human beings and we will create a calculator that can converts a human age to dog age.
+// Trivia: Human age 8 years old is equal to 45 age of years in dogs.
+
+// I will create a variable named myAge that will hold the value of my age or the value of age that I want to convert.
+let myAge = 25;
+
+// We will use this variable to calculate the early years of a dog's life.
+let earlyYears = 2;
+
+// The first two years of a dog's life count as 10.5 dog years each.
+earlyYears *= 10.5;
+
+
+// Since we already accounted the first two years, we will subtract it on my age and will save the result to variable named laterYears.
+let laterYears = myAge - 2
+
+// laterYears will be multiplied by 4, after the first two years the remaining years (age) equates to 4 dog years per 1 human years.
+laterYears *= 4;
+
+// Now we will sum the result of earlyYears and laterYears to get the final result
+let myAgeInDogYears = earlyYears + laterYears;
+
+
+// I will create a variable that will containt my name or the user's name.
+// I will apply string's built-in method toLowerCase(), because the instruction wants us to format it in lowercase.
+let myName = 'John'.toLowerCase()
+
+//We will now log the result to console and we will do it by using string interpolation format.
+console.log(`My name is ${myName}. I am ${myAge} years old in human years, which is ${myAgeInDogYears} years old in dog years.`)

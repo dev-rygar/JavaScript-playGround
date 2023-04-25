@@ -1,0 +1,58 @@
+// We will create a program that will help participants with their race number and schedule; at the same time give them instructions.
+
+// This activity's instruction and goal are kinda off for me, and I will try my best in future to make this program better; as of now I will just follow the instruction what they want the program to do.
+
+// GOAL:
+// Early adults recieves a race number at or above 1000 (randomly)
+
+// Others will receive 1000 below (randomly)
+
+// Adult Registrants run at 9:30 AM or 11:00 AM
+// Early adults run at 9:30 AM
+// Late adults run at 11:00 AM
+
+// Youth registrant run at 12:30 PM (regardless of registration; early or late.)
+
+// Variable that will create a random number from 1-999.
+let raceNumber = Math.floor(Math.random() * 1000);
+
+// I will create a variable that will indicate wether a runner is registered early or not.
+
+// I'd like to change this in future where this variable changes base what time did the participant registered.
+
+// Maybe I'll do it now; I will create an if-else statement that checks the time if it is early or not; to do so I will create another variable (which is time) 1-24 hrs.
+
+let registeredEarly;
+let registeredTime; // will hold a value 1-24.
+let time = 24;
+
+if (registeredTime > 24) {
+  console.log('Invalid input! check your registeredTime input.')
+} else if (registeredTime > 9.5 && registeredTime <= 24) {
+  registeredEarly = false;
+} else {
+  registeredEarly = true;
+}
+
+// We will create a variable age that we will use to determine wether the participant is adult or not.
+let runnersAge = 18;
+
+// The following if statement will determine if the participant is adult and an early registrant; also it will generate a racenumber and give them instruction.
+
+let finalRaceNumber;
+
+if (registeredEarly && runnersAge > 18) {
+  finalRaceNumber = raceNumber + 1000;
+}
+
+if (registeredEarly && runnersAge > 18) {
+  console.log(`You are an adult participant and an early registrant, you will race at 9:30 AM with Race Number: ${finalRaceNumber}`)
+} 
+else if (registeredEarly === false && runnersAge > 18) {
+  console.log(`You are an adult participant and a late registrant, you will race at 11:00 AM with Race Number: ${finalRaceNumber}`)
+}
+else if (runnersAge < 18) {
+  console.log('Since you are a youth participant, you will run at 12:30 PM')
+} else {
+  console.log('If you are 18 years old, please see the registration desk.')
+}

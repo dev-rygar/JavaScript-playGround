@@ -1,0 +1,21 @@
+// Forecast of today's kelvin
+// Update: make it a feature where user can input and change the default kelvin
+let kelvin = 293;
+
+// Celsius is almost similar to kelvin, the only difference is the Celesius is 273 degrees less than kelvin.
+// Converting kelvin to celsius
+let celsius = kelvin - 273;
+
+// In the following line we will convert Celsius to Fahrenheit.
+let fahrenheit = celsius * (9/5) + 32;
+
+// We will use Math's built-in method to round down the result of fahrenheit.
+// Note: we can do this in one line, but for the sake of the activity, I will do this in a hard way.
+fahrenheit = Math.floor(fahrenheit)
+
+// I am now going to log the temperature in Fahrenheint at the console, and we will use string interpolation.
+console.log(`The temperature is ${fahrenheit} degrees Fahrenheit.`)
+
+// Bonus section: additional exercise
+// I will convert celsius into newton, I will convert celsius into newton and round it down in 1 line.
+let newton = Math.floor(celsius * (33/100));
